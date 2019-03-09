@@ -7,6 +7,18 @@ def checkout(skus):
     Docstring ...
 
     NB: String containing the SKUs of all the products in the basket
+
+
+    +------+-------+------------------------+
+    | Item | Price | Special offers         |
+    +------+-------+------------------------+
+    | A    | 50    | 3A for 130, 5A for 200 |
+    | B    | 30    | 2B for 45              |
+    | C    | 20    |                        |
+    | D    | 15    |                        |
+    | E    | 40    | 2E get one B free      |
+    +------+-------+------------------------+
+
     """
     total = 0
     a = b = c = d = 0
@@ -36,3 +48,4 @@ def checkout(skus):
         total += d*15
 
     return total
+
