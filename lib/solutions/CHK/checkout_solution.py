@@ -14,13 +14,13 @@ def checkout(skus):
     try:
         for sku in skus:
             # _sku = sku.lower()
-            if sku == 'a':
+            if sku == 'A':
                 a += 1
-            elif sku == 'b':
+            elif sku == 'B':
                 b += 1
-            elif sku == 'c':
+            elif sku == 'C':
                 c += 1
-            elif sku == 'd':
+            elif sku == 'D':
                 d += 1
             else:
                 total = -1
@@ -36,4 +36,5 @@ def checkout(skus):
         total += d*15
 
     return total
+
 

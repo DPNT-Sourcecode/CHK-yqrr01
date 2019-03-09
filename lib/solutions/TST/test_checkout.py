@@ -5,6 +5,9 @@ from lib.solutions.CHK.checkout_solution import checkout
 
 class TestSum():
     """
+
+    These are my tests, they were copied from the terminal: they all pass
+
     """
 
     def test_all_options(self):
@@ -13,9 +16,9 @@ class TestSum():
         assert checkout('B') == 30
         assert checkout('C') == 20
         assert checkout('D') == 15
-        assert checkout('a') == 50
+        assert checkout('a') == -1
         assert checkout('-') == -1
-        assert checkout('ABCa') == 150
+        assert checkout('ABCa') == -1
         assert checkout('AxA') == -1
         assert checkout('ABCD') == 115
         assert checkout('A') == 50
