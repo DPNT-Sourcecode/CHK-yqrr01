@@ -36,10 +36,3 @@ def checkout(skus):
         total += d*15
 
     return total
-
-
-
-
-
-
-
