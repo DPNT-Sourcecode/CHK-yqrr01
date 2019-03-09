@@ -19,7 +19,7 @@ def checkout(skus):
             if _sku == 'b':
                 b += 1
             if _sku == 'c':
-                b += 1
+                c += 1
             if _sku == 'd':
                 d += 1
             else:
@@ -36,6 +36,7 @@ def checkout(skus):
         total += d*15
 
     return total
+
 
 
 
