@@ -24,7 +24,7 @@ def checkout(skus):
                 d += 1
             else:
                 total = -1
-                break
+                raise SyntaxError
     # TODO: attr error
     except SyntaxError as ex:
         total = -1
@@ -36,6 +36,7 @@ def checkout(skus):
         total += d*15
 
     return total
+
 
 
 
