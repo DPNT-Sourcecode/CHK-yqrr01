@@ -16,11 +16,11 @@ def checkout(skus):
             _sku = sku.lower()
             if _sku == 'a':
                 a += 1
-            if _sku == 'b':
+            elif _sku == 'b':
                 b += 1
-            if _sku == 'c':
+            elif _sku == 'c':
                 c += 1
-            if _sku == 'd':
+            elif _sku == 'd':
                 d += 1
             else:
                 total = -1
@@ -36,3 +36,4 @@ def checkout(skus):
         total += d*15
 
     return total
+
