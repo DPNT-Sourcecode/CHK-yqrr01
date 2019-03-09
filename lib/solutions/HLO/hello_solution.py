@@ -5,5 +5,6 @@
 def hello(friend_name):
     # raise NotImplementedError()
 
-    print("Hello")
+    return "Hello, World!"
+
 
