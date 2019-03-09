@@ -21,7 +21,7 @@ def checkout(skus):
 
     """
     total = 0
-    a = b = c = d = 0
+    a = b = c = d = e = 0
 
     try:
         for sku in skus:
@@ -34,6 +34,8 @@ def checkout(skus):
                 c += 1
             elif sku == 'D':
                 d += 1
+            elif sku == 'E':
+                e += 1                
             else:
                 total = -1
                 raise SyntaxError
@@ -42,10 +44,28 @@ def checkout(skus):
         total = -1
         print(str(ex))
     else:
-        total += (a / 3)*130 + (a % 3)*50
+        # calculate As
+        fivers = a/5
+        triples = (a - fivers*5)/3
+        singles = a - fivers*5 - triples*3
+        # total += (a / 3)*130 + (a % 3)*50
+        total += fivers*200 + triples*130 + singles*50
+
         total += (b / 2)*45 + (b % 2)*30
         total += c*20
         total += d*15
 
+        disc = 0
+        if e/2 and b:
+            b_amount = b
+            e_amount = e/2
+            while b_amount and e_amount:
+                disc += 30
+            b_amount -= 1
+            e_amount -= 1
+        
+        total = total - disc
+
     return total
+
 
