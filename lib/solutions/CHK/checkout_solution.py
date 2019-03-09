@@ -67,5 +67,3 @@ def checkout(skus):
         total = total - disc
 
     return total
-
-
