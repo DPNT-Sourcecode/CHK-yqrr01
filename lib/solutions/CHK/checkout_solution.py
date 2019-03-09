@@ -44,16 +44,25 @@ def checkout(skus):
         total = -1
         print(str(ex))
     else:
-        # calculate As
+        # calculate A
+
+        # option 1
         fivers = a/5
         triples = (a - fivers*5)/3
         singles = a - fivers*5 - triples*3
-        # total += (a / 3)*130 + (a % 3)*50
-        total += fivers*200 + triples*130 + singles*50
+        option_1 = fivers*200 + triples*130 + singles*50
+
+        # option 2
+        triples = a/3
+        singles = a - triples*3
+        option_2 = triples*130 + singles*50
+
+        total += min(option_1, option_2)
 
         total += (b / 2)*45 + (b % 2)*30
         total += c*20
         total += d*15
+        total += e*40
 
         disc = 0
         if e/2 and b:
@@ -67,3 +76,4 @@ def checkout(skus):
         total = total - disc
 
     return total
+
