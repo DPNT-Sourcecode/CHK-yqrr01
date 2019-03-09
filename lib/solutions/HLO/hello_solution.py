@@ -6,6 +6,3 @@ def hello(friend_name):
     # raise NotImplementedError()
 
     return "Hello, {}!".format(friend_name)
-
-
-
