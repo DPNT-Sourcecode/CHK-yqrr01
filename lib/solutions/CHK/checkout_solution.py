@@ -30,10 +30,13 @@ def checkout(skus):
         total = -1
         print(str(ex))
     else:
-        for item in xrange(a):
-                            
+        total += (a / 3)*130 + (a % 3)*50
+        total += (b / 2)*45 + (b % 2)*30
+        total += c*20
+        total += d*15
 
     return total
+
 
 
 
