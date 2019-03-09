@@ -8,7 +8,7 @@ def checkout(skus):
 
     NB: String containing the SKUs of all the products in the basket
     """
-    toral = 0
+    total = 0
     a = b = c = d = 0
 
     try:
@@ -36,6 +36,7 @@ def checkout(skus):
         total += d*15
 
     return total
+
 
 
 
